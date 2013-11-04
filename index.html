@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.png"> -->
+
+  <title>Chantal Jean</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static\js\libs\bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static\css\styles.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+
+      <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy8WgngWaLZ5UlQydTPIsVWEYBTlJ84bQ&sensor=false">
+    </script>    
+     <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+     </head>
+
+    <body>
+      
+
+        
+
+<div class="container">
+
+
+    <div class="container">
+
+      <div class="row ">
+    <!--     <div class="col-xs-12 col-sm-9"> -->
+          <div class="jumbotron">
+            <h1>SOINS ENERGETIQUES</h1>
+            <p>Ecrire ici un texte explicatif synthetique.</p>
+          </div>
+          <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>Soins</h2>
+              <p>Séance individuelle d'une heure </p>
+              <p class="lead">Tarif : 40 €</p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>Contact</h2>
+              <address>
+                <strong>Chantal Jean</strong><br>
+                36, rue des Religieuses<br>
+                50700 VALOGNES<br>
+                <abbr title="Mobile">M:</abbr> 06 61 72 04 54<br>
+                Email: chantal.jean@gmail.com
+              </address>
+            </div><!--/span-->
+           <div class="col-6 col-sm-6 col-lg-4">
+              <h2>Localisation</h2>
+              <div class="container">
+               <div class="row">
+                <div class="span6">
+                 <div id="map-canva"></div>
+                </div>
+               </div>
+              </div>
+            </div><!--/span-->
+ 
+
+          </div><!--/row-->
+        </div><!--/span-->
+
+      </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static\js\libs/jquery-1.9.1.js"></script>
+    <script src="static/js/libs/jquery.backstretch.min.js"></script>
+    <script src="static\js\libs\bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/app.js"></script>
+  </body>
+  </html>
