@@ -1,1 +1,1 @@
-$('body').backstretch(["static/img/fond-ecran-nature-paysages-deserts-018.jpg", "static/img/fond-ecran-nature-paysages-deserts-032.jpg","static/img/fond-ecran-nature-paysages-deserts-057.jpg",]);
+$('body').backstretch("static/img/fond-ecran-nature-paysages-deserts-018.jpg");
