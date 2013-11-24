@@ -11,7 +11,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 class MainPage(webapp2.RequestHandler):
 
 	def get(self):
-		template = JINJA_ENVIRONMENT.get_template('index.html')
+		template = JINJA_ENVIRONMENT.get_template('view/index.html')
 		self.response.write(template.render())
 
 class RedirectPage(webapp2.RequestHandler):
@@ -23,7 +23,7 @@ class RedirectPage(webapp2.RequestHandler):
 class TestPage(webapp2.RequestHandler):
 
 	def get(self):
-		template = JINJA_ENVIRONMENT.get_template('index2.html')
+		template = JINJA_ENVIRONMENT.get_template('view/index2.html')
 		self.response.write(template.render())
 
 application = webapp2.WSGIApplication([
