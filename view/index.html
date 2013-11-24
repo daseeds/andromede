@@ -2,19 +2,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Soins Energétiques">
-  <meta name="author" content="Chantal Jean">
-  <link rel="shortcut icon" href="static/img/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{description}}" />
+  <meta name="author" content="Chantal Jean" />
+  <!-- Start of Facebook Meta Tags -->
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{url}}" />
+  <meta property="og:image" content="{{base_url}}/static/img/chantal.jpg" />
+  <meta property="og:site_name" content="chantaljean.juganville.com"/>
+  <meta property="og:description" content="{{description}}" />
 
-  <title>Chantal Jean - Soins Energétiques</title>
+  <link rel="shortcut icon" href="static/img/favicon.png" />
+
+  <title>{{title}}</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="static/js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="static/css/styles.css" rel="stylesheet">
+  <link href="static/css/styles.css" rel="stylesheet" />
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,7 +35,7 @@
 </head>
 <body>
         
-
+<div id="fb-root"></div>
 <div class="container">
 
 
@@ -49,8 +57,7 @@
                   <span class="glyphicon glyphicon-home"></span> 50700 Valognes
                </address>
                <!-- fb like button -->
-               <div class="fb-like" data-href="http://chantaljean.fr/soins-energetiques-valognes-chantal-jean" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-               <div id="fb-root"></div>
+               <div class="fb-like" data-href="{{url}}" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
                <!-- G+ like button -->
                <div class="g-plusone" data-size="medium" data-href="http://chantaljean.fr/soins-energetiques-valognes-chantal-jean"></div>
                <!-- Twitter button -->
