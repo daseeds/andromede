@@ -8,7 +8,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 	loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
 	extensions=['jinja2.ext.autoescape'])
 
-class TestPage(webapp2.RequestHandler):
+class MainPage(webapp2.RequestHandler):
 
 	def get(self):
 		template = JINJA_ENVIRONMENT.get_template('index.html')
@@ -20,7 +20,7 @@ class RedirectPage(webapp2.RequestHandler):
 		self.redirect('/soins-energetiques-valognes-chantal-jean')
 
 
-class MainPage(webapp2.RequestHandler):
+class TestPage(webapp2.RequestHandler):
 
 	def get(self):
 		template = JINJA_ENVIRONMENT.get_template('index2.html')

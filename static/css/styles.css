@@ -49,6 +49,11 @@ a.navbar-brand {
   padding: 14px 24px;
 }
 
+#map-canvas {
+  width: 350px;
+  height: 350px;
+}
+
 /* Make the masthead heading the same height as the navigation */
 /*.header h3 {
   margin-top: 0;
@@ -94,8 +99,3 @@ a.navbar-brand {
   border-top: 1px solid #e5e5e5;
 }
 
-#map_canvas {
-   display: block;
-   width: 100%;
-   height: 400px;
-}
