@@ -47,6 +47,7 @@ class SiteContent(ndb.Model):
     content = ndb.StringProperty(indexed=False)
     date = ndb.DateTimeProperty(auto_now_add=True)
     title = ndb.StringProperty()
+    main_title = ndb.StringProperty()
     description = ndb.StringProperty()
     tags = ndb.StringProperty()
     block_1_3_content = ndb.TextProperty()
