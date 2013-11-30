@@ -198,6 +198,7 @@ class AdminUpdate(BaseHandler):
 		sitecontent = SiteContent.get_or_insert(DEFAULT_SITE_NAME, status=CURRENT)
 
 		sitecontent_prev.title = sitecontent.title
+		sitecontent_prev.main_title = sitecontent.main_title
 		sitecontent_prev.author = sitecontent.author
 		sitecontent_prev.description = sitecontent.description
 		sitecontent_prev.tags = sitecontent.tags
@@ -210,6 +211,7 @@ class AdminUpdate(BaseHandler):
 		sitecontent_prev.put()
 
 		sitecontent.title = self.request.get('title')
+		sitecontent.main_title = self.request.get('main_title')
 		sitecontent.author = users.get_current_user()
 		sitecontent.description = self.request.get('description')
 		sitecontent.tags = self.request.get('tags')
@@ -232,6 +234,7 @@ class AdminRevert(BaseHandler):
 		sitecontent_temp = SiteContent()
 
 		sitecontent_temp.title = sitecontent.title
+		sitecontent_temp.main_title = sitecontent.main_title
 		sitecontent_temp.author = sitecontent.author
 		sitecontent_temp.description = sitecontent.description
 		sitecontent_temp.tags = sitecontent.tags
@@ -243,6 +246,7 @@ class AdminRevert(BaseHandler):
 		sitecontent_temp.block_2_2_content = sitecontent.block_2_2_content
 
 		sitecontent.title = sitecontent_prev.title
+		sitecontent.main_title = sitecontent_prev.main_title
 		sitecontent.author = sitecontent_prev.author
 		sitecontent.description = sitecontent_prev.description
 		sitecontent.tags = sitecontent_prev.tags
@@ -255,6 +259,7 @@ class AdminRevert(BaseHandler):
 		sitecontent.put()
 
 		sitecontent_prev.title = sitecontent_temp.title
+		sitecontent_prev.main_title = sitecontent_temp.main_title
 		sitecontent_prev.author = sitecontent_temp.author
 		sitecontent_prev.description = sitecontent_temp.description
 		sitecontent_prev.tags = sitecontent_temp.tags
