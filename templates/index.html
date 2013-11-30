@@ -4,19 +4,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{description}}" />
+  <meta name="description" content="{{sitecontent.description}}" />
   <meta name="author" content="Chantal Jean" />
+  <meta name="tag" content="{{sitecontent.tag}}" />
   <!-- Start of Facebook Meta Tags -->
-  <meta property="og:title" content="{{title}}" />
+  <meta property="og:title" content="{{sitecontent.title}}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{url}}" />
   <meta property="og:image" content="{{base_url}}/static/img/chantal.jpg" />
   <meta property="og:site_name" content="chantaljean.juganville.com"/>
-  <meta property="og:description" content="{{description}}" />
+  <meta property="og:description" content="{{sitecontent.description}}" />
 
   <link rel="shortcut icon" href="static/img/favicon.png" />
 
-  <title>{{title}}</title>
+  <title>{{sitecontent.title}}</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -34,21 +35,37 @@
  
 </head>
 <body>
-        
-<div id="fb-root"></div>
-<div class="container">
+
+  <div id="fb-root"></div>
+  <div class="container">
+
+      <div class="jumbotron">
+        <h1>Soins Energétiques Traditionels</h1>
+<!--         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p> -->
+      </div>
 
 
-    <div class="container">
+
 
       <div class="row ">
           <div class="row">
-            <div class="col-md-4">
-              <h2>Soins Energétiques</h2>
-              <img class="img-responsive" src="static/img/chantal.jpg" alt="Chantal Jean">
-              
+            <div class="col-md-8">
+              <p class="lead">Chantal pratique ces soins en cabinet depuis 10 ans. Cette pratique est le fruit d'une formation et d'un travail personnel.</p>
+              <p class="lead">Un soin énergétique apaise et soulage. Il revitalise et redynamise le corps en réactivant la force vitale de l'être.
+Le soin agit à la fois sur un plan physique, psychique et émotionnel.</p>
+              <p class="lead">Il s'adresse à tous, bébés, enfants et adultes, à toute personne en situation de souffrance. </p>
+              <p class="lead">Le soin ne se substitue en aucun cas à un traitement médical mais peut l'accompagner et agir en complémentarité.</p>     
+              <p class="lead">Séance individuelle d'une heure: 40 euros</p>       
+             <h2>Localisation</h2>
+                <!-- <img class="featurette-image img-responsive" data-src="holder.js/350x350/auto" alt="Generic placeholder image"> -->
+                 <div id="map-canvas"></div>
+
             </div>
             <div class="col-md-4">
+              <!-- <h2>Soins Energétiques</h2> -->
+              <img class="img-responsive img-thumbnail" src="/serve/{{sitecontent.picture}}" alt="Chantal Jean">
+              
+
               <h2>Contact</h2>
               <address>
                 <strong>Chantal Jean</strong><br>
@@ -64,40 +81,15 @@
               <div><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://chantaljean.fr/soins-energetiques-valognes-chantal-jean" data-lang="fr">Tweeter</a></div>
 
             </div>
-            <div class="col-md-4">
-              <h2>Chantal Jean</h2>
-              <p class="lead">Chantal pratique ces soins en cabinet depuis 10 ans. Cette pratique est le fruit d'une formation et d'un travail personnel.</p>
-            </div>
+
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <h2>Ce qu'apporte un soin</h2>
-              <p class="lead">Un soin énergétique apaise et soulage. Il revitalise et redynamise le corps en réactivant la force vitale de l'être.
-Le soin agit à la fois sur un plan physique, psychique et émotionnel.</p>
-              <p>Séance individuelle d'une heure </p>
-              <p class="lead">Tarif : 40 €</p>
-            </div><!--/span-->
-            <div class="col-md-4">
-              <h2>A qui s'adresse un soin</h2>
-              <p class="lead">Il s'adresse à tous, bébés, enfants et adultes, à toute personne en situation de souffrance. </p>
-              <p class="lead">Le soin ne se substitue en aucun cas à un traitement médical mais peut l'accompagner et agir en complémentarité.</p>
-            </div><!--/span-->
-           <div class="col-md-4">
-              <h2>Localisation</h2>
-                <!-- <img class="featurette-image img-responsive" data-src="holder.js/350x350/auto" alt="Generic placeholder image"> -->
-                 <div id="map-canvas"></div>
-
-            </div><!--/span-->
- 
-
-          </div><!--/row-->
+   
         </div><!--/span-->
 
-      <hr />  
-      <!-- FOOTER -->
+       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Retour en haut</a></p>
-        <p>&copy; 2013-2014 Chantal Jean &middot; Using <a href="http://http://getbootstrap.com/">Bootstrap</a> and <a href="http://glyphicons.com/">Glyphicons</a></p>
+
       </footer>
 
       </div><!-- /.container -->
@@ -109,7 +101,9 @@ Le soin agit à la fois sur un plan physique, psychique et émotionnel.</p>
     <script src="static/js/libs/jquery-1.9.1.js"></script>
     <script src="static/js/libs/jquery.backstretch.min.js"></script>
     <script src="static/js/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script>$('body').backstretch("/serve/{{sitecontent.background}}");</script>
     <script src="static/js/app.js"></script>
     <script src="static/js/libs/holder.js"></script>
+
   </body>
   </html>

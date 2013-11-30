@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap core CSS -->
+  <link href="static/js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container">
+
+	<a href="{{url}}">{{url_linktext}}</a>
+	{% if user %}
+	<p>Current user: {{user}}</p>
+	<a href="/admin/revert">Revert changes</a>
+
+	<hr>
+	<form class="form-horizontal" role="form" action="/admin/update" method="post">
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputEmail2">Head Title</label>
+	    <div class="col-sm-10">
+	    	<input type="text" class="form-control" value="{{sitecontent.title}}" name="title" placeholder="Head title">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">Head description</label>
+	    <div class="col-sm-10">
+	    	<input type="text" class="form-control" value="{{sitecontent.description}}" name="description" >
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">Head tags</label>
+	    <div class="col-sm-10">
+	    	<input type="text" class="form-control" value="{{sitecontent.tags}}" name="tags" >
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_1_3_heading</label>
+	    <div class="col-sm-10">
+	    	<input type="text" class="form-control" value="{{sitecontent.block_1_3_heading}}" name="block_1_3_heading" >
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_1_3_content</label>
+	    <div class="col-sm-10">
+	    	<textarea class="form-control" rows="3" name="block_1_3_content">{{sitecontent.block_1_3_content}}</textarea> 
+	    </div>
+	  </div>	  
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_1_heading</label>
+	    <div class="col-sm-10">
+	    	<input type="text" class="form-control" value="{{sitecontent.block_2_1_heading}}" name="block_2_1_heading" >
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_1_content</label>
+	    <div class="col-sm-10">
+	    	<textarea class="form-control" rows="3" name="block_2_1_content">{{sitecontent.block_2_1_content}}</textarea> 
+	    </div>
+	  </div>	
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_2_heading</label>
+	    <div class="col-sm-10">
+	    	<input type="text" class="form-control" value="{{sitecontent.block_2_2_heading}}" name="block_2_2_heading" >
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_2_content</label>
+	    <div class="col-sm-10">
+	    	<textarea class="form-control" rows="3" name="block_2_2_content">{{sitecontent.block_2_2_content}}</textarea> 
+	    </div>
+	  </div>	
+
+	  <button type="submit" class="btn btn-default">Save changes</button>
+	</form>
+
+	<form class="form-horizontal" role="form"  action="{{upload_url}}" enctype="multipart/form-data" method="post">
+		<div class="form-group">
+		<label class="col-sm-2 control-label" for="exampleInputPassword2">Portrait</label>
+		<div class="col-sm-2">
+	    	<img src="/serve/{{sitecontent.picture}}"  class="img-responsive img-thumbnail">
+	    </div>
+		<div class="col-sm-2">
+	    	<input type="file" name="picture"/>
+	    </div>
+        </div>
+        <button type="submit" class="btn btn-default">Upload image</button>
+    </form>
+	<form class="form-horizontal" role="form"  action="{{upload_url}}" enctype="multipart/form-data" method="post">
+		<div class="form-group">
+		<label class="col-sm-2 control-label" for="exampleInputPassword2">Background</label>
+		<div class="col-sm-2">
+	    	<img src="/serve/{{sitecontent.background}}"  class="img-responsive img-thumbnail">
+	    </div>
+		<div class="col-sm-2">
+	    	<input type="file" name="background"/>
+	    </div>
+        </div>
+        <button type="submit" class="btn btn-default">Upload image</button>
+    </form>
+	{% endif %}
+</div>
+    <script src="static/js/libs/jquery-1.9.1.js"></script>
+    <script src="static/js/libs/bootstrap/js/bootstrap.min.js"></script>
+</body>
