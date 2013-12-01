@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap core CSS -->
   <link href="static/js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="static/js/libs/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 
@@ -42,39 +43,12 @@
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_1_3_heading</label>
+	    <label class="col-sm-2 control-label" for="exampleInputPassword2">content</label>
 	    <div class="col-sm-10">
-	    	<input type="text" class="form-control" value="{{sitecontent.block_1_3_heading}}" name="block_1_3_heading" >
-	    </div>
-	  </div>	  
-	  <div class="form-group">
-	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_1_3_content</label>
-	    <div class="col-sm-10">
-	    	<textarea class="form-control" rows="3" name="block_1_3_content">{{sitecontent.block_1_3_content}}</textarea> 
-	    </div>
-	  </div>	  
-	  <div class="form-group">
-	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_1_heading</label>
-	    <div class="col-sm-10">
-	    	<input type="text" class="form-control" value="{{sitecontent.block_2_1_heading}}" name="block_2_1_heading" >
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_1_content</label>
-	    <div class="col-sm-10">
-	    	<textarea class="form-control" rows="3" name="block_2_1_content">{{sitecontent.block_2_1_content}}</textarea> 
-	    </div>
-	  </div>	
-	  <div class="form-group">
-	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_2_heading</label>
-	    <div class="col-sm-10">
-	    	<input type="text" class="form-control" value="{{sitecontent.block_2_2_heading}}" name="block_2_2_heading" >
-	    </div>
-	  </div>
-	  <div class="form-group">
-	    <label class="col-sm-2 control-label" for="exampleInputPassword2">block_2_2_content</label>
-	    <div class="col-sm-10">
-	    	<textarea class="form-control" rows="3" name="block_2_2_content">{{sitecontent.block_2_2_content}}</textarea> 
+	    	<textarea id="editor" class="form-control" rows="3" name="content">{{sitecontent.content|safe}}</textarea> 
+	    	<script>
+    			CKEDITOR.replace( 'editor' );
+			</script>
 	    </div>
 	  </div>	
 
@@ -108,5 +82,6 @@
 	{% endif %}
 </div>
     <script src="static/js/libs/jquery-1.9.1.js"></script>
+    
     <script src="static/js/libs/bootstrap/js/bootstrap.min.js"></script>
 </body>

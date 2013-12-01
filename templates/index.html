@@ -40,7 +40,7 @@
   <div class="container">
 
       <div class="jumbotron">
-        <h1>{{sitecontent.main_title}}</h1>
+        <h1 >{{sitecontent.main_title}}</h1>
 <!--         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p> -->
       </div>
 
@@ -49,14 +49,9 @@
 
       <div class="row ">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 lead">
  
-              <p class="lead">Un soin énergétique apaise et soulage. Il revitalise et redynamise le corps en réactivant la force vitale de l'être.
-Le soin agit à la fois sur un plan physique, psychique et émotionnel.</p>
-              <p class="lead">Il s'adresse à tous, bébés, enfants et adultes, à toute personne en situation de souffrance. </p>
-              <p class="lead">Le soin ne se substitue en aucun cas à un traitement médical mais peut l'accompagner et agir en complémentarité.</p>     
-              <p class="lead">Séance individuelle d'une heure: 40 euros</p>       
-             <p class="lead">Je pratique ces soins en cabinet depuis 10 ans. Cette pratique est le fruit d'une formation et d'un travail personnel.</p>
+             {{sitecontent.content|safe}}
              <h2>Localisation</h2>
 
                 <!-- <img class="featurette-image img-responsive" data-src="holder.js/350x350/auto" alt="Generic placeholder image"> -->
@@ -102,6 +97,7 @@ Le soin agit à la fois sur un plan physique, psychique et émotionnel.</p>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="static/js/libs/jquery-1.9.1.js"></script>
     <script src="static/js/libs/jquery.backstretch.min.js"></script>
+    <script src="static/js/libs/ckeditor.js"></script>
     <script src="static/js/libs/bootstrap/js/bootstrap.min.js"></script>
     <script>$('body').backstretch("/serve/{{sitecontent.background}}");</script>
     <script src="static/js/app.js"></script>

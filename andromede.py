@@ -208,6 +208,7 @@ class AdminUpdate(BaseHandler):
 		sitecontent_prev.author = sitecontent.author
 		sitecontent_prev.description = sitecontent.description
 		sitecontent_prev.tags = sitecontent.tags
+		sitecontent_prev.content = sitecontent.content
 		sitecontent_prev.block_1_3_heading = sitecontent.block_1_3_heading
 		sitecontent_prev.block_2_1_heading = sitecontent.block_2_1_heading
 		sitecontent_prev.block_2_2_heading = sitecontent.block_2_2_heading
@@ -221,6 +222,7 @@ class AdminUpdate(BaseHandler):
 		sitecontent.author = users.get_current_user()
 		sitecontent.description = self.request.get('description')
 		sitecontent.tags = self.request.get('tags')
+		sitecontent.content = self.request.get('content')
 		sitecontent.block_1_3_heading = self.request.get('block_1_3_heading')
 		sitecontent.block_2_1_heading = self.request.get('block_2_1_heading')
 		sitecontent.block_2_2_heading = self.request.get('block_2_2_heading')
@@ -244,6 +246,7 @@ class AdminRevert(BaseHandler):
 		sitecontent_temp.author = sitecontent.author
 		sitecontent_temp.description = sitecontent.description
 		sitecontent_temp.tags = sitecontent.tags
+		sitecontent_temp.content = sitecontent.content
 		sitecontent_temp.block_1_3_heading = sitecontent.block_1_3_heading
 		sitecontent_temp.block_2_1_heading = sitecontent.block_2_1_heading
 		sitecontent_temp.block_2_2_heading = sitecontent.block_2_2_heading
@@ -256,6 +259,7 @@ class AdminRevert(BaseHandler):
 		sitecontent.author = sitecontent_prev.author
 		sitecontent.description = sitecontent_prev.description
 		sitecontent.tags = sitecontent_prev.tags
+		sitecontent.content = sitecontent_prev.content
 		sitecontent.block_1_3_heading = sitecontent_prev.block_1_3_heading
 		sitecontent.block_2_1_heading = sitecontent_prev.block_2_1_heading
 		sitecontent.block_2_2_heading = sitecontent_prev.block_2_2_heading
@@ -269,6 +273,7 @@ class AdminRevert(BaseHandler):
 		sitecontent_prev.author = sitecontent_temp.author
 		sitecontent_prev.description = sitecontent_temp.description
 		sitecontent_prev.tags = sitecontent_temp.tags
+		sitecontent_prev.content = sitecontent_temp.content
 		sitecontent_prev.block_1_3_heading = sitecontent_temp.block_1_3_heading
 		sitecontent_prev.block_2_1_heading = sitecontent_temp.block_2_1_heading
 		sitecontent_prev.block_2_2_heading = sitecontent_temp.block_2_2_heading
