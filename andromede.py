@@ -136,6 +136,10 @@ class AdminPage(BaseHandler):
 
 		#picture = BlobInfo(sitecontent.picture)
 
+		# public_props = (name for name in dir(sitecontent) if not name.startswith('_'))
+		# for name in public_props:
+		# 	logging.info(name)
+
 		template_values = {
 			'url': url,
 			'url_linktext': url_linktext,
@@ -196,6 +200,8 @@ class AdminUpdate(BaseHandler):
 
 		sitecontent_prev = SiteContent.get_or_insert('test', status=PREVIOUS)
 		sitecontent = SiteContent.get_or_insert(DEFAULT_SITE_NAME, status=CURRENT)
+
+
 
 		sitecontent_prev.title = sitecontent.title
 		sitecontent_prev.main_title = sitecontent.main_title
