@@ -15,4 +15,6 @@ handlers:
   static_dir: static
 - url: /.*
   script: andromede.application
-
+- url: /favicon\.ico
+  static_files: static/img/favicon.png
+  upload: static/img/favicon\.png
