@@ -4,6 +4,8 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+default_expiration: "30d"
+
 libraries:
 - name: jinja2
   version: latest
