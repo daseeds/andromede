@@ -179,7 +179,7 @@ class ServeHandler(blobstore_handlers.BlobstoreDownloadHandler):
 			logging.info("ServeHandler resource: %s", resource)
 			resource = str(urllib.unquote(resource))
 			blob_info = blobstore.BlobInfo.get(resource)
-			self.response.headers["Cache-Control"] = "public, max-age=86400"
+			self.response.headers['Cache-Control'] = 'public,max-age=86400'
 			self.response.headers['Pragma'] = 'Public'
 			self.send_blob(blob_info)
 		except (ValueError, TypeError):
