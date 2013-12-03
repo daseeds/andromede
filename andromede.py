@@ -7,6 +7,7 @@ from functools import wraps
 from webapp2_extras.routes import RedirectRoute
 from webapp2_extras import jinja2
 
+from google.appengine.api import images
 from google.appengine.api import users
 from google.appengine.ext import ndb
 
@@ -286,7 +287,26 @@ class AdminRevert(BaseHandler):
 		sitecontent_prev.put()
 		self.redirect('/admin')
 
+class ImageHandler(BaseHandler):
+	@admin_protect
+	def get(self, resource):
+		blob_key = str(urllib.unquote(resource))
+		if blob_key:
+			blob_info = blobstore.get(blob_key)
 
+			if blob_info:
+				img = images.Image(blob_key=blob_key)
+				img.resize(width=500, height=500)
+				img.im_feeling_lucky()
+				thumbnail = img.execute_transforms(output_encoding=images.JPEG)
+
+				self.response.headers['Content-Type'] = 'image/jpeg'
+				self.response.out.write(thumbnail)
+				return
+
+        # Either "blob_key" wasn't provided, or there was no value with that ID
+        # in the Blobstore.
+		self.error(404)
 
 debug = os.environ.get('SERVER_SOFTWARE', '').startswith('Dev')
 
@@ -302,6 +322,7 @@ application = webapp2.WSGIApplication([
 	webapp2.Route('/admin/update', handler=AdminUpdate, name='adminupdate'),
 	webapp2.Route('/admin/revert', handler=AdminRevert, name='adminrevert'),
 	webapp2.Route('/upload', handler=AdminUploadHandler, name='AdminUploadHandler'),
+	webapp2.Route('/admin/resize/<:([^/]+)?>', ImageHandler, name='ImageHandler'),
 
 	], debug=debug)
 
