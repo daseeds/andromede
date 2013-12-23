@@ -49,6 +49,11 @@ a.navbar-brand {
   padding: 14px 24px;
 }
 
+
+.lead {
+  font-size: 28px;
+}
+
 #map-canvas {
   width: 350px;
   height: 350px;
