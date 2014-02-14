@@ -34,6 +34,10 @@ a.navbar-brand {
 
 }
 
+/*.container {
+  margin-left: 15px ;
+  margin-right: 15px;
+}*/
 
 .panel {
   /* Fallback for web browsers that doesn't support RGBa */
@@ -49,10 +53,9 @@ a.navbar-brand {
   padding: 14px 24px;
 }
 
-
-.lead {
+/*.lead {
   font-size: 28px;
-}
+}*/
 
 #map-canvas {
   width: 350px;
@@ -94,6 +97,9 @@ a.navbar-brand {
   .jumbotron {
     border-bottom: 0;
   }
+  .lead {
+  font-size: 28px;
+ }
 }
 
 
