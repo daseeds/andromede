@@ -36,19 +36,14 @@
 </head>
 <body>
 
-  <div class="hidden" itemscope itemtype="http://data-vocabulary.org/Person" > 
-    <span itemprop="name">Chantal Jean</span> 
-    <a href="http://www.chantaljean.fr" itemprop="url">www.chantaljean.fr</a>
-    <img itemprop="photo" src="{{base_url}}/serve/{{sitecontent.picture}}">
-    <span itemprop="affiliation">{{sitecontent.title}}</span>.
-  </div>
+
 
 
   <div class="container section">
     <div class="row">
       <div class="col-md-12 main-header">
 
-        <img src="/serve/{{sitecontent.background}}" class="img-responsive" alt="Responsive image">
+        <img src="/serve/{{sitecontent.background}}" class="img-responsive img-rounded" alt="Responsive image">
 
       </div>
     </div>
@@ -56,12 +51,23 @@
 
   <div class="container">
     <div class="row ">
-      <div class="col-md-8 ">
+      <div class="col-md-8 " itemscope itemtype="http://data-vocabulary.org/Person">
 
-        <h1 class="page_header">{{sitecontent.main_title}}</h1>
-
+        <h1 class="page_header"><span itemprop="affiliation">{{sitecontent.main_title}}</span></h1>
         {{sitecontent.content|safe}}
-        <img class="img-responsive img-thumbnail" width="300" src="/serve/{{sitecontent.picture}}" alt="Chantal Jean">
+
+          <span itemprop="name"><strong>Chantal Jean</strong></span> <br />
+          06 61 72 04 54 <br />
+
+        <span itemprop="address">36 rue des religieuses<br />
+        50700 Valognes</span><br />
+        <a href="mailto:#">chantal.jean50@gmail.com</a><br />
+
+          <a href="http://chantaljean.fr" itemprop="url">chantaljean.fr</a><br />
+        
+
+        <img itemprop="photo" class="img-responsive img-thumbnail" width="300" src="{{base_url}}/serve/{{sitecontent.picture}}" alt="Chantal Jean">
+        
         <h2>Valognes</h2>
         <!-- <img class="featurette-image img-responsive" data-src="holder.js/350x350/auto" alt="Generic placeholder image"> -->
       </div>
