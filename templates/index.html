@@ -19,7 +19,7 @@
 
   <title>{{sitecontent.title}}</title>
 
-  <!-- Bootstrap core CSS -->
+  <!-- CSS -->
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
@@ -31,75 +31,76 @@
       <script src="static/js/libs/respond.min.js"></script>
       <![endif]-->
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rLZKU5XaXOeiVeoARFC6uf3jRvyrEKY&sensor=false"></script>    
- 
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rLZKU5XaXOeiVeoARFC6uf3jRvyrEKY&sensor=false"></script>    
+
 </head>
 <body>
 
-<div class="hidden" itemscope itemtype="http://data-vocabulary.org/Person" > 
-  <span itemprop="name">Chantal Jean</span> 
-  <a href="http://www.chantaljean.fr" itemprop="url">www.chantaljean.fr</a>
-  <img itemprop="photo" src="{{base_url}}/serve/{{sitecontent.picture}}">
-  <span itemprop="affiliation">{{sitecontent.title}}</span>.
-</div>
+  <div class="hidden" itemscope itemtype="http://data-vocabulary.org/Person" > 
+    <span itemprop="name">Chantal Jean</span> 
+    <a href="http://www.chantaljean.fr" itemprop="url">www.chantaljean.fr</a>
+    <img itemprop="photo" src="{{base_url}}/serve/{{sitecontent.picture}}">
+    <span itemprop="affiliation">{{sitecontent.title}}</span>.
+  </div>
 
-  <div id="fb-root"></div>
+
+  <div class="container section">
+    <div class="row">
+      <div class="col-md-12 main-header">
+
+        <img src="/serve/{{sitecontent.background}}" class="img-responsive" alt="Responsive image">
+
+      </div>
+    </div>
+  </div>
+
   <div class="container">
+    <div class="row ">
+      <div class="col-md-8 ">
 
-      <div class="jumbotron">
-        <h1 >{{sitecontent.main_title}}</h1>
-<!--         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p> -->
+        <h1 class="page_header">{{sitecontent.main_title}}</h1>
+
+        {{sitecontent.content|safe}}
+        <img class="img-responsive img-thumbnail" width="300" src="/serve/{{sitecontent.picture}}" alt="Chantal Jean">
+        <h2>Valognes</h2>
+        <!-- <img class="featurette-image img-responsive" data-src="holder.js/350x350/auto" alt="Generic placeholder image"> -->
       </div>
 
 
+    </div>
+
+  </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+     <div id="map-canvas"></div>
+   </div>
+ </div>
 
 
-      <div class="row ">
-          <div class="row">
-            <div class="col-md-12 lead">
- 
-             {{sitecontent.content|safe}}
-            <img class="img-responsive img-thumbnail" width="300" src="/serve/{{sitecontent.picture}}" alt="Chantal Jean">
-              
+ <!-- FOOTER -->
+ <footer>
 
-             <h2>Localisation</h2>
-
-                <!-- <img class="featurette-image img-responsive" data-src="holder.js/350x350/auto" alt="Generic placeholder image"> -->
-                 <div id="map-canvas"></div>
-
-            </div>
-
-
-          </div>
-   
-        </div><!--/span-->
-
-       <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Retour en haut</a></p>
-
-      </footer>
-
-      </div><!-- /.container -->
+ </footer>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="static/js/libs/jquery.backstretch.min.js"></script>
+    <!--<script src="static/js/libs/jquery.backstretch.min.js"></script>-->
     <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>-->
-    <script>$('body').backstretch("/serve/{{sitecontent.background}}");</script>
-    <script src="static/js/app.js"></script>
-  <script>
+    <!--<script>$('body').backstretch("/serve/{{sitecontent.background}}");</script>-->
+    <script src="/static/js/libs/jquery.slides.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-19659730-2', 'chantaljean.fr');
     ga('send', 'pageview');
 
-  </script>
+    </script>
   </body>
   </html>
