@@ -1,105 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
 
-<!DOCTYPE html>
-<html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{sitecontent.description}}" />
-  <meta name="author" content="Chantal Jean" />
-  <meta name="tag" content="{{sitecontent.tags}}" />
-  <!-- Start of Facebook Meta Tags -->
-  <meta property="og:title" content="{{sitecontent.title}}" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{url}}" />
-  <meta property="og:image" content="{{base_url}}/serve/{{sitecontent.picture}}" />
-  <meta property="og:site_name" content="chantaljean.juganville.com"/>
-  <meta property="og:description" content="{{sitecontent.description}}" />
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="shortcut icon" href="static/img/favicon.png" />
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="static/img/icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-  <title>{{sitecontent.title}}</title>
+  <link rel="stylesheet" href="static/css/normalize.css">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
 
-  <!-- Bootstrap core CSS -->
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="static/css/styles.css" rel="stylesheet" />
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="static/js/libs/html5shiv.js"></script>
-      <script src="static/js/libs/respond.min.js"></script>
-      <![endif]-->
-
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rLZKU5XaXOeiVeoARFC6uf3jRvyrEKY&sensor=false"></script>    
- 
+  <meta name="theme-color" content="#fafafa">
 </head>
-<body>
 
-<div class="hidden" itemscope itemtype="http://data-vocabulary.org/Person" > 
-  <span itemprop="name">Chantal Jean</span> 
-  <a href="http://www.chantaljean.fr" itemprop="url">www.chantaljean.fr</a>
-  <img itemprop="photo" src="{{base_url}}/serve/{{sitecontent.picture}}">
-  <span itemprop="affiliation">{{sitecontent.title}}</span>.
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+<div class="container-fluid">
+  <div class="row position-relative overflow-hidden p-3  text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 font-weight-normal">Soins énergétiques traditionnels</h1>
+    </div>
+  </div>
+
+  <div class="row mx-lg-n5">
+    <div class="col py-3 px-lg-5 border bg-light">
+    <img src="static/img/0b24f0447073400b8308f55ae98e3871.webp" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="col py-3 px-lg-5 border bg-light">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Une origine ancienne préservée</h2>
+        <p class="lead">Une origine ancienne préservée
+Ces soins énergétiques proviennent d'une Tradition qui a été fondée il y a des siècles par des thérapeutes vivant retirés dans le désert, en Egypte.
+Leur méthode de soin a été préservée et est transmise de manière identique et sans interruption depuis son origine.
+Grâce à un enseignement reçu de manière individuelle, chaque thérapeute, par un long travail d'ouverture intérieure, développe la capacité de transmettre une Energie de Vie qui agit sur les deux niveaux essentiels de l'être que sont le corps et l'esprit (psychologique et émotionnel).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 ">
+      <div class="my-3 py-3">
+
+      </div>
+    </div>
+    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Une origine ancienne préservée</h2>
+        <p class="lead">Une origine ancienne préservée
+Ces soins énergétiques proviennent d'une Tradition qui a été fondée il y a des siècles par des thérapeutes vivant retirés dans le désert, en Egypte.
+Leur méthode de soin a été préservée et est transmise de manière identique et sans interruption depuis son origine.
+Grâce à un enseignement reçu de manière individuelle, chaque thérapeute, par un long travail d'ouverture intérieure, développe la capacité de transmettre une Energie de Vie qui agit sur les deux niveaux essentiels de l'être que sont le corps et l'esprit (psychologique et émotionnel).</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-  <div id="fb-root"></div>
-  <div class="container">
+  <script src="static/js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="static/js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="static/js/plugins.js"></script>
+  <script src="static/js/main.js"></script>
 
-      <div class="jumbotron">
-        <h1 >{{sitecontent.main_title}}</h1>
-<!--         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p> -->
-      </div>
-
-
-
-
-      <div class="row ">
-          <div class="row">
-            <div class="col-md-12 lead">
- 
-             {{sitecontent.content|safe}}
-            <img class="img-responsive img-thumbnail" width="300" src="/serve/{{sitecontent.picture}}" alt="Chantal Jean">
-              
-
-             <h2>Localisation</h2>
-
-                <!-- <img class="featurette-image img-responsive" data-src="holder.js/350x350/auto" alt="Generic placeholder image"> -->
-                 <div id="map-canvas"></div>
-
-            </div>
-
-
-          </div>
-   
-        </div><!--/span-->
-
-       <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Retour en haut</a></p>
-
-      </footer>
-
-      </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="static/js/libs/jquery.backstretch.min.js"></script>
-    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>-->
-    <script>$('body').backstretch("/serve/{{sitecontent.background}}");</script>
-    <script src="static/js/app.js"></script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-19659730-2', 'chantaljean.fr');
-    ga('send', 'pageview');
-
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-19659730-2', 'auto'); ga('send', 'pageview')
   </script>
-  </body>
-  </html>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

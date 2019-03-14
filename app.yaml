@@ -16,8 +16,10 @@ handlers:
 - url: /favicon\.ico
   static_files: static/img/favicon.png
   upload: static/img/favicon\.png
+- url: /site\.webmanifest
+  static_files: static/site.webmanifest
+  upload: static/site\.webmanifest
 - url: /static
   static_dir: static
 - url: /.*
   script: andromede.application
-
